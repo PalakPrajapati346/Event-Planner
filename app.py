@@ -115,11 +115,11 @@ import warnings
 warnings.filterwarnings('ignore')
 from crewai import Agent, Task, Crew
 with open(".env", "w") as f:
-    f.write("GEMINI_API_KEY=AIzaSyBg_T7oIyaavBAhOhrQoMX7lvRGhHKzvEA\n")
+    f.write("GEMINI_API_KEY=Your key here\n")
 with open(".env", "w") as f:
-    f.write("SERPER_API_KEY=6bc3c782b34632817f5b997bd97c9badcabb7d07\n")
+    f.write("SERPER_API_KEY=Your key here\n")
 import os
-os.environ["GEMINI_API_KEY"] = "AIzaSyBg_T7oIyaavBAhOhrQoMX7lvRGhHKzvEA"
+os.environ["GEMINI_API_KEY"] = "Your key here"
 gemini_api_key = get_gemini_api_key()
 gemini_llm = LLM(
     provider="gemini",
@@ -131,7 +131,7 @@ yaml_config = """
 model_list:
   - model_name: gemini/gemini-2.5-flash
     litellm_provider: gemini
-    api_key: "${AIzaSyBg_T7oIyaavBAhOhrQoMX7lvRGhHKzvEA}"
+    api_key: "${Your key here}"
 """
 
 with open("litellm.yaml", "w") as f:
